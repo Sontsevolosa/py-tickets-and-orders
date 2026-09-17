@@ -66,7 +66,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='movie',
             name='genres',
-            field=models.ManyToManyField(related_name='movies', to='db.genre'),
+            field=models.ManyToManyField(related_name='orders', to='db.genre'),
         ),
         migrations.AlterField(
             model_name='moviesession',
@@ -76,7 +76,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='moviesession',
             name='movie',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='movie_sessions', to='db.movie'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='tickets', to='db.movie'),
         ),
         migrations.AddIndex(
             model_name='movie',
